@@ -1,1 +1,51 @@
+### DISPOSITIVOS DE ENTRADA E SAIDA
 
+### LISTA DE EXERCICIOS
+1 - Quais as principais diferenças entre dispositivos de entrada e saída de bloco
+e dispositivos de entrada e saída de caractere.Todos os dispositivos de E/S podem
+ser classificados em uma dessas duas categorias(Justifique).
+
+### A respeito dos principios de hardware de E/S, responda:
+
+a) Quais partes compõem o hardware dos dispositivos de E/S?
+b) Quais os principais objetivos da controladora dos dispositivos de E/S?
+c) Qual  o objetivo da técnica de portas de E/S? Nesses termos, descreva o funcio
+namento dessa técnica.
+d) Qual o objetivo da técnica de E/S mapeada na memória? Nesses termos, descreva
+o funcionamento dessa técnica.
+e) Compare as técnicas de portas de E/S e E/S mapeada na memória, ressaltando as
+vantagens e desvantagens de cada uma.
+f) Qual o objetivo da técnica de DMA (Acesso Direto à Memória)? Nesses termos, des-
+creva o passo-a-passo relativo a uma operação de leitura envolvendo um dispositivos
+de E/S quando esta técnica é utilizada.
+g) O que é um roubo de ciclos? Qual a relação deste evento com a figura do árbitro
+de barramento?
+h) Roubo de ciclos inviabiliza a utilização de dispositivos de E/S de que fazem uso
+de DMA? Justifique sua resposta.
+i) O que é o Vetor de Interrupções e uma RSI( Rotina de Serviço de Interrupção)?
+Nesse contexto, descreva o passo-a-passo desde a geração de uma interrupção por parte
+de um dispositivo de E/S até o termino do tratamento desta.
+j) O que são interrupções precisas e interrupções imprecisas? Relacione esses dois
+tipos de interrupções com as técnicas de paralelismo a nivel de instrução (pipeline)
+e a nivel de processadores composta por processadores superescalares.
+k) Por que interrupções imprecisas não são interessantes sob o ponto de vista do bom
+funcionamento dos sistemas computacionais? Nesses termos, como o SO pode tornar as
+interrupções imprecisas em precisas?
+
+### A respeito dos principios de software de E/S, responda:
+
+a) Cite os principais objetivos do software de E/S.
+b) Quantas e quais camadas compõem o software de E/S?
+c) A respeito da camada de Tratadores de Interrupção, qual o seu objetivo e como
+ela interage com as demais camadas existentes no software de E/S?
+d) A respeito da camada do Driver, qual o seu objetivo e como ela interage com as
+demais camadas existentes no software de E/S?
+e) A respeito da camada de Indepencia de Dispositivo, qual o seu objetivo e como ela
+interage com as demais camadas existentes no software de E/S?
+f) Como a camada de Indepencia de Dispositivo resolve as seguintes questões: 
+- Interface uniforme para dispositivos de E/S;
+- Relatorio de erros;
+- Alocação/liberação de dispositivos dedicados;
+- Definição do tamanho de bloco de dados.
+g) A respeito da camada de E/S no Nível de Usuário, qual o seu objetivo e como ela
+interage com as demais camadas existentes no software de E/S?
