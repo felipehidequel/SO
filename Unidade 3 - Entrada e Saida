@@ -5,21 +5,56 @@
 e dispositivos de entrada e saída de caractere.Todos os dispositivos de E/S podem
 ser classificados em uma dessas duas categorias(Justifique).
 
+Os dispositivos de bloco armazenam informações em bloco de tamanho fixo, cada um com seu própio endereço, alem disso permitem operações de busca.
+Os de caractere, enviam ou recebem um fluxo de caracteres, desconsiderando qualquer estrutura de bloco. ele não é endereçavel e não tem operações de busca.
+Essa classificação não é perfeita pois alguns dispositivos não se encaixam em nenhuma das duas categorias.
+
 ### A respeito dos principios de hardware de E/S, responda:
 
 a) Quais partes compõem o hardware dos dispositivos de E/S?
+Controladores, conversor digital analogico, conversor analogico-digital, e buffers
+
 b) Quais os principais objetivos da controladora dos dispositivos de E/S?
+Gerenciamento de comunicação, Gerenciamento de interrupções, controle de acesso aos recursos, conversão de dados, gerenciamento de enrgia e detectção e correção de erros
 c) Qual  o objetivo da técnica de portas de E/S? Nesses termos, descreva o funcio
 namento dessa técnica.
+O principal objetivo dessas portas é garantira comunicação entre o dispositivo e o processador.
+
+* Aguarda um novo dado
+* Informa que o controlador está ocupado
+* lê o dado na porta de entrada
+* informa que o dado foi recebido
+* usa o dado internamente
+* gera IRq avisando conclusão
+
 d) Qual o objetivo da técnica de E/S mapeada na memória? Nesses termos, descreva
 o funcionamento dessa técnica.
+
+Nesta abordagem, uma parte não ocupada do espaço de endereços de memória é reservado para mapear as portas de acesso aos dispositivos. Dessa forma, as portas são vistas
+como se fossem parte da memoria principal e podem ser lidas e escritas atraves das mesmas intruções usadas para acessar o restante da memória.
+
 e) Compare as técnicas de portas de E/S e E/S mapeada na memória, ressaltando as
 vantagens e desvantagens de cada uma.
+
+As portas de E/S oferecem uma separação mais clara entre a memoria principal e os dispositivos de E/S, proporcionando maior segurança e eficiência para acesso direto ao 
+hardware. Já a E/S mapeada na memoria simplifica a programação e oferece mais flexibilidade, embora possa ser menos segura e eficiente em certas situações. 
+
 f) Qual o objetivo da técnica de DMA (Acesso Direto à Memória)? Nesses termos, des-
 creva o passo-a-passo relativo a uma operação de leitura envolvendo um dispositivos
 de E/S quando esta técnica é utilizada.
+
+O objetivo é permitir que os dispositivos transfiram dados diretamente para a memoria principal do sistema, sem a necessidade da intervenção constante da CPU. Isso torna o
+sistema mais eficiente. 
+
+* Dispositivo de E/S solicita operação de leitura ao controlador de DMA
+* DMA solicita acesso ao barramento
+* controlador DMA trnafere os dados diretamente entre o Dispositivo e a memoria principal
+* Com a transferencia conlcuida o DMA gera uma interrupção para notificar que a operação foi realizada
+
 g) O que é um roubo de ciclos? Qual a relação deste evento com a figura do árbitro
 de barramento?
+
+
 h) Roubo de ciclos inviabiliza a utilização de dispositivos de E/S de que fazem uso
 de DMA? Justifique sua resposta.
 i) O que é o Vetor de Interrupções e uma RSI( Rotina de Serviço de Interrupção)?
